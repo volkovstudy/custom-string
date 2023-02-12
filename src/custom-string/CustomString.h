@@ -2,6 +2,7 @@
 #define CUSTOM_STRING_CUSTOMSTRING_H
 
 #include <string>
+#include <ostream>
 
 using namespace std;
 
@@ -13,6 +14,8 @@ public:
     explicit CustomString(const char* value);
 
     const string& getValue() const;
+
+    friend ostream& operator<<(ostream& output, const CustomString& customString);
 };
 
 
