@@ -1,5 +1,7 @@
 #include "CustomString.h"
 
+#include <algorithm>
+
 CustomString::CustomString(const string& value) :
         _value(value) {}
 
@@ -19,4 +21,15 @@ ostream& operator<<(ostream& output, const CustomString& customString) {
     }
 
     return output;
+}
+
+istream& operator>>(istream& input, CustomString& customString) {
+    string value;
+    input >> value;
+
+    sort(value.begin(), value.end(), greater<>());
+
+    customString._value = value;
+
+    return input;
 }

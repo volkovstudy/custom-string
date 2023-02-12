@@ -16,6 +16,7 @@ public:
     const string& getValue() const;
 
     friend ostream& operator<<(ostream& output, const CustomString& customString);
+    friend istream& operator>>(istream& input, CustomString& customString);
 };
 
 
