@@ -2,7 +2,7 @@
 
 #include "custom-string/CustomString.h"
 
-TEST(OutputOperator, HandlesString) {
+TEST(OutputOperator, HandlesWord) {
     CustomString customString("abcd");
 
     stringstream output;
@@ -11,7 +11,7 @@ TEST(OutputOperator, HandlesString) {
     ASSERT_EQ(output.str(), "dcba");
 }
 
-TEST(OutputOperator, HandlesWord) {
+TEST(OutputOperator, HandlesString) {
     CustomString customString("some word");
 
     stringstream output;
