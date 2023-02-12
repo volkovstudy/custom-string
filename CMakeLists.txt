@@ -16,3 +16,13 @@ find_package(GTest REQUIRED)
 
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+################################
+# Unit Tests
+################################
+include_directories(tests)
+
+add_executable(custom-string-tests ${main-sources} tests/custom-string-tests/CustomStringTests.cpp)
+target_link_libraries(custom-string-tests gtest gtest_main)
+
+add_test(NAME CustomString COMMAND custom-string-tests)
