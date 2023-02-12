@@ -5,7 +5,7 @@ project(custom-string)
 
 include_directories(src)
 
-file(GLOB_RECURSE main-sources "src/*.cpp")
+file(GLOB_RECURSE main-sources "src/custom-string/*.cpp")
 
 add_executable(custom-string src/main.cpp)
 
