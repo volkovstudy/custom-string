@@ -11,6 +11,8 @@ private:
 public:
     explicit CustomString(const string& value);
     explicit CustomString(const char* value);
+
+    const string& getValue() const;
 };
 
 

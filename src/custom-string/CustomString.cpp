@@ -5,3 +5,7 @@ CustomString::CustomString(const string& value) :
 
 CustomString::CustomString(const char* value) :
         _value(string(value)) {}
+
+const string& CustomString::getValue() const {
+    return _value;
+}
