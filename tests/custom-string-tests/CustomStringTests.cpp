@@ -2,6 +2,12 @@
 
 #include "custom-string/CustomString.h"
 
+TEST(Constructor, HandlesWithCharArray) {
+    CustomString customString({'a', 'b', 'c'});
+
+    ASSERT_EQ(customString.getValue(), "abc");
+}
+
 TEST(OutputOperator, HandlesWord) {
     CustomString customString("abcd");
 
