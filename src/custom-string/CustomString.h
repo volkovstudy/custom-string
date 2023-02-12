@@ -8,6 +8,8 @@ using namespace std;
 class CustomString {
 private:
     string _value;
+public:
+    explicit CustomString(const string& value);
 };
 
 
