@@ -8,6 +8,12 @@ TEST(Constructor, HandlesWithCharArray) {
     ASSERT_EQ(customString.getValue(), "abc");
 }
 
+TEST(Constructor, HandlesStringClass) {
+    CustomString customString("abc");
+
+    ASSERT_EQ(customString.getValue(), "abc");
+}
+
 TEST(OutputOperator, HandlesWord) {
     CustomString customString("abcd");
 
