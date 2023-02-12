@@ -10,3 +10,13 @@ TEST(OutputOperator, HandlesString) {
 
     ASSERT_EQ(output.str(), "dcba");
 }
+
+TEST(InputOperator, HandlesString) {
+    stringstream input;
+    input << "abcd";
+
+    CustomString customString("");
+    input >> customString;
+
+    ASSERT_EQ(customString.getValue(), "dcba");
+}
