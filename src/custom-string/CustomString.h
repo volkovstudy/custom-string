@@ -10,6 +10,7 @@ private:
     string _value;
 public:
     explicit CustomString(const string& value);
+    explicit CustomString(const char* value);
 };
 
 
