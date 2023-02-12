@@ -7,7 +7,7 @@ include_directories(src)
 
 file(GLOB_RECURSE main-sources "src/custom-string/*.cpp")
 
-add_executable(custom-string src/main.cpp)
+add_executable(custom-string src/main.cpp ${main-sources})
 
 ################################
 # GTest
