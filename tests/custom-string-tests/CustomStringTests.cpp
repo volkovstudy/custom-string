@@ -11,6 +11,15 @@ TEST(OutputOperator, HandlesString) {
     ASSERT_EQ(output.str(), "dcba");
 }
 
+TEST(OutputOperator, HandlesWord) {
+    CustomString customString("some word");
+
+    stringstream output;
+    output << customString;
+
+    ASSERT_EQ(output.str(), "drow emos");
+}
+
 TEST(InputOperator, HandlesString) {
     stringstream input;
     input << "abcd";
