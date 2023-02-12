@@ -15,10 +15,9 @@ const string& CustomString::getValue() const {
 ostream& operator<<(ostream& output, const CustomString& customString) {
     string value = customString._value;
 
-    for (int i = value.size() - 1; i >= 0; --i) {
-        char element = value.at(i);
-        output << element;
-    }
+    reverse(value.begin(), value.end());
+
+    output << value;
 
     return output;
 }
